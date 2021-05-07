@@ -12,11 +12,13 @@ pin: true
 
 Follow the tutorials from [github](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) and [chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
 
+using [chirpy-starter](https://github.com/cotes2020/chirpy-starter) to easily build your site
+
 ## Some problems
 
 My environment: Windows10 and using ruby3
 
-When setting up this blog, bundle returned LoadError: cannot load such file webrick
+When locally setting up this blog, bundle returned LoadError: cannot load such file webrick
 
 I tried [this](https://stackoverflow.com/questions/65617143/cannot-load-such-file-webrick-httputils) and it worked. 
 
