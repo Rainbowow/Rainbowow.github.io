@@ -15,23 +15,21 @@ timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Chirpy                          # the main title
+title: Rainbowow                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Recording something something   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  upload something about leetcode problems and CV
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://Rainbowow.github.io'
 
 github:
-  username: github_username             # change to your github username
+  username: Rainbowow             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username:             # change to your twitter username
 
 social:
   # Change to your full name.
