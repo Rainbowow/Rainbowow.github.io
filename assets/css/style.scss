@@ -1,7 +1,8 @@
+  
 ---
 ---
 
-@import {{ site.theme }}
+// see: /_sass/addon/commons.scss
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
-// add your style below
-$tab-count: {{ site.tabs | size | plus: 1 }};
+@import "jekyll-theme-chirpy";
