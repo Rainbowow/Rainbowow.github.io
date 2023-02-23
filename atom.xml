@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-23T00:33:51.386Z</updated>
+  <updated>2023-02-23T02:03:12.439Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2023/02/22/Blog_build/"/>
     <id>http://example.com/2023/02/22/Blog_build/</id>
     <published>2023-02-23T00:29:11.163Z</published>
-    <updated>2023-02-23T00:33:51.386Z</updated>
+    <updated>2023-02-23T02:03:12.439Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="steps"><a class="markdownIt-Anchor" href="#steps"></a> Steps</h1><ul><li>Follow the links in References</li></ul><h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1><ul><li><a href="https://blog.csdn.net/yaorongke/article/details/119089190">https://blog.csdn.net/yaorongke/article/details/119089190</a></li><li><a href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html">https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="steps"><a class="markdownIt-Anchor" href="#steps"></a> Steps</h1><ul><li>Follow the links in References</li></ul><h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1><ul><li><a href="https://blog.csdn.net/yaorongke/article/details/119089190">https://blog.csdn.net/yaorongke/article/details/119089190</a></li><li><a href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html">https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html</a></li><li><a href="https://hexo.io/zh-cn/docs/github-pages.html">https://hexo.io/zh-cn/docs/github-pages.html</a></li><li><a href="https://blog.csdn.net/weixin_48927364/article/details/123405585">https://blog.csdn.net/weixin_48927364/article/details/123405585</a></li></ul>]]></content>
     
     
       
