@@ -17,21 +17,22 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Process to build this blog | Rainbow&#39;s blog</title>
-  <meta name="description" content="Steps  Follow the links in References   References  https:&#x2F;&#x2F;blog.csdn.net&#x2F;yaorongke&#x2F;article&#x2F;details&#x2F;119089190 https:&#x2F;&#x2F;blog.cofess.com&#x2F;2017&#x2F;11&#x2F;01&#x2F;hexo-blog-theme-pure-usage-description.html https:&#x2F;&#x2F;he">
+  <title>Vim cheat sheet | Rainbow&#39;s blog</title>
+  <meta name="description" content="Movement  Moving Horizontally Word By Word  123      ↑← h j k l →    ↓  w word by word b word by word backward W WORD by WORD B WORD by WORD backward e jump to the end of the word ge jump to the end">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Process to build this blog">
-<meta property="og:url" content="http://example.com/2023/02/22/Blog_build/index.html">
+<meta property="og:title" content="Vim cheat sheet">
+<meta property="og:url" content="http://example.com/2023/02/22/Vim_CheatSheet/index.html">
 <meta property="og:site_name" content="Rainbow&#39;s blog">
-<meta property="og:description" content="Steps  Follow the links in References   References  https:&#x2F;&#x2F;blog.csdn.net&#x2F;yaorongke&#x2F;article&#x2F;details&#x2F;119089190 https:&#x2F;&#x2F;blog.cofess.com&#x2F;2017&#x2F;11&#x2F;01&#x2F;hexo-blog-theme-pure-usage-description.html https:&#x2F;&#x2F;he">
+<meta property="og:description" content="Movement  Moving Horizontally Word By Word  123      ↑← h j k l →    ↓  w word by word b word by word backward W WORD by WORD B WORD by WORD backward e jump to the end of the word ge jump to the end">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-02-23T00:29:11.163Z">
-<meta property="article:modified_time" content="2023-02-23T03:19:50.996Z">
+<meta property="article:published_time" content="2023-02-23T03:34:27.926Z">
+<meta property="article:modified_time" content="2023-02-23T03:34:33.779Z">
 <meta property="article:author" content="Rainbow">
-<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Tool">
+<meta property="article:tag" content="Vim">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2023/02/22/Blog_build/index.html">
+  <link rel="canonical" href="http://example.com/2023/02/22/Vim_CheatSheet/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Rainbow&#39;s blog" type="application/atom+xml">
   
@@ -277,21 +278,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">Catalogue</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#steps"><span class="toc-number">1.</span> <span class="toc-text"> Steps</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#references"><span class="toc-number">2.</span> <span class="toc-text"> References</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#movement"><span class="toc-number">1.</span> <span class="toc-text"> Movement</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#moving-horizontally-word-by-word"><span class="toc-number">1.1.</span> <span class="toc-text"> Moving Horizontally Word By Word</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#move-to-a-sepcial-character"><span class="toc-number">1.2.</span> <span class="toc-text"> Move to a Sepcial Character</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#moving-horizontally-extremely"><span class="toc-number">1.3.</span> <span class="toc-text"> Moving Horizontally Extremely</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#moving-vertically"><span class="toc-number">1.4.</span> <span class="toc-text"> Moving Vertically</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#high-precision-vertical-motions-with-search-pattern"><span class="toc-number">1.5.</span> <span class="toc-text"> High Precision Vertical Motions With Search Pattern</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#moving-faster-with-counts"><span class="toc-number">1.6.</span> <span class="toc-text"> Moving Faster With Counts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#and-some-more-nifty-core-motions"><span class="toc-number">1.7.</span> <span class="toc-text"> And Some More Nifty Core Motions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undo-and-redo"><span class="toc-number">1.8.</span> <span class="toc-text"> undo and redo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#delete"><span class="toc-number">1.9.</span> <span class="toc-text"> delete</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#change"><span class="toc-number">1.10.</span> <span class="toc-text"> change</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dot"><span class="toc-number">1.11.</span> <span class="toc-text"> dot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ci"><span class="toc-number">1.12.</span> <span class="toc-text"> ci</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#other-operators"><span class="toc-number">1.13.</span> <span class="toc-text"> Other Operators</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#more-short-hand-operators"><span class="toc-number">1.14.</span> <span class="toc-text"> More Short-hand Operators</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Blog_build" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Vim_CheatSheet" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Process to build this blog
+      Vim cheat sheet
     </h1>
   
 
@@ -299,43 +300,143 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2023/02/22/Blog_build/" class="article-date">
-	  <time datetime="2023-02-23T00:29:11.163Z" itemprop="datePublished">2023-02-22</time>
+	<a href="/2023/02/22/Vim_CheatSheet/" class="article-date">
+	  <time datetime="2023-02-23T03:34:27.926Z" itemprop="datePublished">2023-02-22</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Github/">Github</a>
+    <a class="article-category-link" href="/categories/Vim/">Vim</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Blog/" rel="tag">Blog</a>
+	<a class="article-tag-link-link" href="/tags/Tool/" rel="tag">Tool</a>, <a class="article-tag-link-link" href="/tags/Vim/" rel="tag">Vim</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/02/22/Blog_build/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/02/22/Vim_CheatSheet/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="steps"><a class="markdownIt-Anchor" href="#steps"></a> Steps</h1>
+        <h1 id="movement"><a class="markdownIt-Anchor" href="#movement"></a> Movement</h1>
+<h2 id="moving-horizontally-word-by-word"><a class="markdownIt-Anchor" href="#moving-horizontally-word-by-word"></a> Moving Horizontally Word By Word</h2>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">      ↑</span><br><span class="line">← h j k l →</span><br><span class="line">    ↓</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>w word by word<br />
+b word by word backward</p>
+<p>W WORD by WORD<br />
+B WORD by WORD backward</p>
+<p>e jump to the end of the word<br />
+ge jump to the end of previous word</p>
+<p>E jump to the end of of WORD<br />
+gE jump to the end of previous WORD</p>
+<h2 id="move-to-a-sepcial-character"><a class="markdownIt-Anchor" href="#move-to-a-sepcial-character"></a> Move to a Sepcial Character</h2>
+<p><code>f&#123;character&#125;</code>  find character forward</p>
+<p><code>F&#123;character&#125;</code> find character backward</p>
+<p><code>t&#123;character&#125;</code></p>
+<p>after using f, type ; to find next match</p>
+<h2 id="moving-horizontally-extremely"><a class="markdownIt-Anchor" href="#moving-horizontally-extremely"></a> Moving Horizontally Extremely</h2>
 <ul>
-<li>Follow the links in References</li>
+<li><code>0</code>: Moves to the first character of a line</li>
+<li><code>^</code>: Moves to the first non-blank character of a line</li>
+<li><code>$</code>: Moves to the end of a line</li>
+<li><code>g_</code>: Moves to the non-blank character at the end of a line</li>
 </ul>
-<h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1>
+<h2 id="moving-vertically"><a class="markdownIt-Anchor" href="#moving-vertically"></a> Moving Vertically</h2>
+<p>Starting from <code>k</code> and <code>j</code>, we move on to a faster way of maneuvering vertically with:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">https://blog.csdn.net/yaorongke/article/details/119089190</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html">https://blog.cofess.com/2017/11/01/hexo-blog-theme-pure-usage-description.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages.html">https://hexo.io/zh-cn/docs/github-pages.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48927364/article/details/123405585">https://blog.csdn.net/weixin_48927364/article/details/123405585</a></li>
-<li><a target="_blank" rel="noopener" href="https://wuyi2.github.io/2020/02/12/%E4%BD%BF%E7%94%A8Github-SSH-Key%E6%9D%A5%E9%81%BF%E5%85%8DHexo%E9%83%A8%E7%BD%B2%E6%97%B6%E8%BE%93%E5%85%A5%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81/">https://wuyi2.github.io/2020/02/12/使用Github-SSH-Key来避免Hexo部署时输入账户密码/</a></li>
+<li><code>&#125;</code> jumps entire paragraphs downwards</li>
+<li><code>&#123;</code> similarly but upwards</li>
+<li><code>CTRL-D</code> lets you move down half a page by scrolling the page</li>
+<li><code>CTRL-U</code> lets you move up half a page also by scrolling</li>
 </ul>
+<h2 id="high-precision-vertical-motions-with-search-pattern"><a class="markdownIt-Anchor" href="#high-precision-vertical-motions-with-search-pattern"></a> High Precision Vertical Motions With Search Pattern</h2>
+<ul>
+<li><code>/&#123;pattern&#125;</code> to search forward</li>
+<li><code>?&#123;pattern&#125;</code> to search backwards</li>
+</ul>
+<p>use n to go to the next match<br />
+use N to go to the next match<br />
+after press ENTER press N or n</p>
+<h2 id="moving-faster-with-counts"><a class="markdownIt-Anchor" href="#moving-faster-with-counts"></a> Moving Faster With Counts</h2>
+<p>Counts are numbers which let you multiply the effect of a command:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;count&#125;&#123;command&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="and-some-more-nifty-core-motions"><a class="markdownIt-Anchor" href="#and-some-more-nifty-core-motions"></a> And Some More Nifty Core Motions</h2>
+<p>These are yet more motions that can come in handy from time to time:</p>
+<ul>
+<li>Type <code>gg</code> to go to the top of the file.</li>
+<li>Use <code>&#123;line&#125;gg</code> to go to a specific line.</li>
+<li>Use <code>G</code> to go to the end of the file.</li>
+<li>Type <code>%</code> jump to matching <code>(&#123;[]&#125;)</code>.</li>
+</ul>
+<h2 id="undo-and-redo"><a class="markdownIt-Anchor" href="#undo-and-redo"></a> undo and redo</h2>
+<p>u to undo<br />
+ctrl+r to redo</p>
+<h2 id="delete"><a class="markdownIt-Anchor" href="#delete"></a> delete</h2>
+<p>dd for delete line<br />
+D for delete line from the cursor</p>
+<blockquote>
+<ul>
+<li>
+<p>d{motion} - delete text covered by motion</p>
+<ul>
+<li>d2w =&gt; deletes two words</li>
+<li>dt; =&gt; delete until ;</li>
+<li>d/hello =&gt; delete until hello</li>
+</ul>
+</li>
+<li>
+<p>dd - delete line<br />
+x delete at cursor<br />
+d0 delete to start of line<br />
+d$ delete to end of line<br />
+d) delete to end of sentence<br />
+dgg delete to start of file<br />
+dG delete to end of file</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="change"><a class="markdownIt-Anchor" href="#change"></a> change</h2>
+<p>change and insert<br />
+example</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// d + i=&gt; wdtSipolite&lt;ESC&gt;fcdwipolitely&lt;ESPACE&gt;&lt;ESC&gt;</span></span><br><span class="line"><span class="comment">// c =&gt; wctSpolite&lt;ESC&gt;fccwpolitely&lt;ESPACE&gt;&lt;ESC&gt;</span></span><br><span class="line"><span class="keyword">const</span> politeSalute = <span class="string">&quot;I politely salute you good person.&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>cc change entire line<br />
+C changes from the cursor until the end of the line</p>
+<h2 id="dot"><a class="markdownIt-Anchor" href="#dot"></a> dot</h2>
+<p>repeat last change</p>
+<h2 id="ci"><a class="markdownIt-Anchor" href="#ci"></a> ci</h2>
+<p>directly change text objects from anywhere of the line</p>
+<p>ciw cis cip ci&quot;</p>
+<p>also, ci{ or ci( can be applied</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    |- `a` means around</span><br><span class="line">    |- `i` means inner</span><br><span class="line">   /</span><br><span class="line">  /</span><br><span class="line"> /</span><br><span class="line">&#123;a|i&#125;&#123;text-object&#125;</span><br><span class="line">          /</span><br><span class="line">         /</span><br><span class="line">        | w - word</span><br><span class="line">        | s - sentence</span><br><span class="line">        | p - paragraph</span><br><span class="line">        | &quot; - quotes</span><br></pre></td></tr></table></figure>
+<h2 id="other-operators"><a class="markdownIt-Anchor" href="#other-operators"></a> Other Operators</h2>
+<p>In addition to <code>d</code> and <code>c</code> these are other useful operators:</p>
+<ul>
+<li><code>y</code> (yank): Copy in Vim jargon</li>
+<li><code>p</code> (put): Paste in Vim jargon</li>
+<li><code>g~</code> (switch case): Changes letters from lowercase to uppercase and back. Alternatively, use <code>gu</code> to make something lowercase and <code>gU</code> to make something uppercase</li>
+<li><code>&gt;</code> (shift right): Adds indentation</li>
+<li><code>&lt;</code> (shift left): Removes indentation</li>
+<li><code>=</code> (format code): Formats code</li>
+</ul>
+<p><code>y</code> and <code>p</code> is how you copy and paste things in Vim. Like <code>d</code> and <code>c</code>, <code>y</code> can be combined with motions and text objects to copy any text that you desire:</p>
+<h2 id="more-short-hand-operators"><a class="markdownIt-Anchor" href="#more-short-hand-operators"></a> More Short-hand Operators</h2>
+<ul>
+<li><code>x</code> is equivalent to <code>dl</code> and deletes the character under the cursor</li>
+<li><code>X</code> is equivalent to <code>dh</code> and deletes the character before the cursor</li>
+<li><code>s</code> is equivalent to <code>ch</code>, deletes the character under the cursor and puts you into Insert mode</li>
+<li><code>r</code> allows you to replace one single character for another. Very handy to fix typos.</li>
+<li><code>~</code> to switch case for a single character</li>
+</ul>
+<p>A nice way use case for <code>x</code> is to swap a couple of characters when you make a typo. You remove (and cut) a character with <code>x</code> and immediately paste it after the cursor with <code>p</code>. Try it!</p>
 
       
     </div>
@@ -397,10 +498,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/02/22/Vim_CheatSheet/" title="Vim cheat sheet"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2023/02/22/Blog_build/" title="Process to build this blog"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
     <li class="toggle-toc">
