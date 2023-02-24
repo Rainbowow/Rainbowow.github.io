@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-23T03:34:33.779Z</updated>
+  <updated>2023-02-24T23:28:51.938Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Conclusion of Video Debugging like a pro</title>
+    <link href="http://example.com/2023/02/24/Debug_like_a_Pro/"/>
+    <id>http://example.com/2023/02/24/Debug_like_a_Pro/</id>
+    <published>2023-02-24T23:12:17.751Z</published>
+    <updated>2023-02-24T23:28:51.938Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1><p><a href="https://www.youtube.com/watch?v=J8uAiZJMfzQ">Debuggig like a pro – ByteByteGo</a></p><h1 id="mindset"><a class="markdownIt-Anchor" href="#mindset"></a> Mindset</h1><ul><li>There is alwasy a logical explanation!</li><li>Being stuck is temporarily!</li><li>Know your limits and ask for help when needed.</li><li>Prioritize bugs based on their potential impact and severity!</li></ul><h1 id="basics"><a class="markdownIt-Anchor" href="#basics"></a> Basics</h1><ol><li>Collect details to REPRODUCE the issue: screen shots, logs, error messages</li><li>Some strategies:<ol><li>Use print statements</li><li>setup proper debugger</li></ol></li></ol><h2 id="what-if-we-cant-reproduce-the-issue"><a class="markdownIt-Anchor" href="#what-if-we-cant-reproduce-the-issue"></a> What if we can’t reproduce the issue?</h2><ul><li>Some bugs only appear under production loads</li><li>Some bugs only appear in certain race conditions</li></ul><p>What to do with this:</p><ol><li>trace the code line by line, especially the failed call entire life cycle</li><li>add logs to our code and deploy it to production and eventially get enough information and solve the issue.</li></ol><h1 id="what-if-completely-stuck"><a class="markdownIt-Anchor" href="#what-if-completely-stuck"></a> What if completely stuck?</h1><ol><li>take a break</li><li>think out loud</li><li>ask for help from senior people</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;references&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#references&quot;&gt;&lt;/a&gt; References&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J8uAiZJ</summary>
+      
+    
+    
+    
+    <category term="Learning from videos" scheme="http://example.com/categories/Learning-from-videos/"/>
+    
+    
+    <category term="Program skills" scheme="http://example.com/tags/Program-skills/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>What is Load Balancer?</title>
+    <link href="http://example.com/2023/02/23/Load_Balancer/"/>
+    <id>http://example.com/2023/02/23/Load_Balancer/</id>
+    <published>2023-02-23T20:28:45.741Z</published>
+    <updated>2023-02-24T23:28:31.579Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="why"><a class="markdownIt-Anchor" href="#why"></a> Why</h1><ul><li>If a system is designed to fulfill large amounts of customer needs, a way to balance network loads must be applied. Typically, more servers will be added. But how to balance loads to each server? So a load balancer is needed as well.</li></ul><h1 id="features"><a class="markdownIt-Anchor" href="#features"></a> Features</h1><ul><li>automatically activate or deactivate application servers</li></ul><h1 id="senarios"><a class="markdownIt-Anchor" href="#senarios"></a> Senarios</h1><ul><li>Dumb senario: Round robin, but what if different users log in differently time length and lead to server usage unbalanced?</li><li>Smart senario: choose the lease used app server. Why not always use this? Initial setup is more complex, and more expensive to use.</li><li>Random select</li></ul><h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1><p><a href="https://www.youtube.com/watch?v=sCR3SAVdyCc&amp;t=48s">https://www.youtube.com/watch?v=sCR3SAVdyCc&amp;t=48s</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;why&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#why&quot;&gt;&lt;/a&gt; Why&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;If a system is designed to fulfill large amounts of customer ne</summary>
+      
+    
+    
+    
+    <category term="Learning from videos" scheme="http://example.com/categories/Learning-from-videos/"/>
+    
+    
+    <category term="System Design" scheme="http://example.com/tags/System-Design/"/>
+    
+  </entry>
   
   <entry>
     <title>Vim cheat sheet</title>

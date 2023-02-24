@@ -1,3 +1,5 @@
+http://example.com/2023/02/24/Debug_like_a_Pro/
+http://example.com/2023/02/23/Load_Balancer/
 http://example.com/2023/02/22/Vim_CheatSheet/
 http://example.com/2023/02/22/Blog_build/
 http://example.com/404.html
@@ -9,5 +11,8 @@ http://example.com/
 http://example.com/tags/Blog/
 http://example.com/tags/Tool/
 http://example.com/tags/Vim/
+http://example.com/tags/System-Design/
+http://example.com/tags/Program-skills/
 http://example.com/categories/Github/
 http://example.com/categories/Vim/
+http://example.com/categories/Learning-from-videos/
