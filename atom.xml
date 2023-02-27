@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-24T23:28:51.938Z</updated>
+  <updated>2023-02-27T04:01:17.400Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microservice learning</title>
+    <link href="http://example.com/2023/02/26/Microservice/"/>
+    <id>http://example.com/2023/02/26/Microservice/</id>
+    <published>2023-02-27T03:48:20.542Z</published>
+    <updated>2023-02-27T04:01:17.400Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h1><ul><li><a href="https://www.youtube.com/watch?v=fR1Qof1peBs">https://www.youtube.com/watch?v=fR1Qof1peBs</a></li></ul><h1 id="traditional-cs"><a class="markdownIt-Anchor" href="#traditional-cs"></a> Traditional C/S</h1><ul><li>Pack of macro services</li><li>if one service needs update, all system need to be deployed again</li></ul><h1 id="microservice"><a class="markdownIt-Anchor" href="#microservice"></a> Microservice</h1><ul><li>Many independent small services</li><li>Every service handles a small feature</li><li>Micro services communicate with each other by APIs</li><li>Can be deployed independently</li><li>Responsible for persisting their own data or external state</li></ul><h1 id="benefits-of-microservices"><a class="markdownIt-Anchor" href="#benefits-of-microservices"></a> Benefits of Microservices</h1><ul><li>Agility</li><li>Isolation<ul><li>Data isolation</li><li>fault isolation</li></ul></li><li>Mix of technologies</li><li>Scalability</li></ul><h1 id="challenges"><a class="markdownIt-Anchor" href="#challenges"></a> Challenges</h1><ul><li>Complexity</li><li>Skill sets for distributed system</li><li>Development and testing</li><li>Lack of governance</li><li>Network congestion and latency</li><li>Data integrity</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;references&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#references&quot;&gt;&lt;/a&gt; References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=f</summary>
+      
+    
+    
+    
+    <category term="Learning from videos" scheme="http://example.com/categories/Learning-from-videos/"/>
+    
+    
+    <category term="System Design" scheme="http://example.com/tags/System-Design/"/>
+    
+  </entry>
   
   <entry>
     <title>Conclusion of Video Debugging like a pro</title>
