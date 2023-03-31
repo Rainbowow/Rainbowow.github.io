@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Golang Basics Notes | Rainbow&#39;s blog</title>
+  <meta name="description" content="1 First Go program 1234567package mainimport &quot;fmt&quot;func main() &amp;#123;    fmt.Println(&quot;hello, world!&quot;)&amp;#125; Using 1go run hello.go or 12go build hello.go.&#x2F;hello to run this program">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang Basics Notes">
+<meta property="og:url" content="http://example.com/2023/03/27/Go_Learning/index.html">
+<meta property="og:site_name" content="Rainbow&#39;s blog">
+<meta property="og:description" content="1 First Go program 1234567package mainimport &quot;fmt&quot;func main() &amp;#123;    fmt.Println(&quot;hello, world!&quot;)&amp;#125; Using 1go run hello.go or 12go build hello.go.&#x2F;hello to run this program">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-27T20:52:19.003Z">
+<meta property="article:modified_time" content="2023-03-31T04:57:58.944Z">
+<meta property="article:author" content="Rainbow">
+<meta property="article:tag" content="Program skills">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/2023/03/27/Go_Learning/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Rainbow&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/Rainbowow" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Rainbow</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Boston, MA</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Rainbowow" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>Rainbow personal blog</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Learning-from-videos/">Learning from videos</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vim/">Vim</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Program-skills/" rel="tag">Program skills</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/System-Design/" rel="tag">System Design</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/" rel="tag">Tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/" rel="tag">Vim</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Blog/" style="font-size: 13px;">Blog</a> <a href="/tags/Program-skills/" style="font-size: 14px;">Program skills</a> <a href="/tags/System-Design/" style="font-size: 14px;">System Design</a> <a href="/tags/Tool/" style="font-size: 13px;">Tool</a> <a href="/tags/Vim/" style="font-size: 13px;">Vim</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Technology/">Technology</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/03/27/Go_Learning/" class="title">Golang Basics Notes</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-27T20:52:19.003Z" itemprop="datePublished">2023-03-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Learning-from-videos/">Learning from videos</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/02/26/Microservice/" class="title">Microservice learning</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-02-27T03:48:20.542Z" itemprop="datePublished">2023-02-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Learning-from-videos/">Learning from videos</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/02/24/Debug_like_a_Pro/" class="title">Conclusion of Video Debugging like a pro</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-02-24T23:12:17.751Z" itemprop="datePublished">2023-02-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Learning-from-videos/">Learning from videos</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/02/23/Load_Balancer/" class="title">What is Load Balancer?</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-02-23T20:28:45.741Z" itemprop="datePublished">2023-02-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Vim/">Vim</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/02/22/Vim_CheatSheet/" class="title">Vim cheat sheet</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-02-23T03:34:27.926Z" itemprop="datePublished">2023-02-22</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">Catalogue</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-first-go-program"><span class="toc-number">1.</span> <span class="toc-text"> 1 First Go program</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-go-variables"><span class="toc-number">2.</span> <span class="toc-text"> 2 Go Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#declare-multiple-variables"><span class="toc-number">2.1.</span> <span class="toc-text"> Declare multiple variables</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-constants"><span class="toc-number">3.</span> <span class="toc-text"> Go Constants</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rules"><span class="toc-number">3.1.</span> <span class="toc-text"> Rules</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-output"><span class="toc-number">4.</span> <span class="toc-text"> Go output</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#formatting-verbs"><span class="toc-number">4.1.</span> <span class="toc-text"> Formatting verbs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-arrays"><span class="toc-number">5.</span> <span class="toc-text"> Go Arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#array-initialization"><span class="toc-number">5.1.</span> <span class="toc-text"> Array initialization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#init-only-specific-elements"><span class="toc-number">5.2.</span> <span class="toc-text"> Init only specific elements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find-the-length-of-an-array"><span class="toc-number">5.3.</span> <span class="toc-text"> Find the length of an array</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-slices"><span class="toc-number">6.</span> <span class="toc-text"> Go slices</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create-a-slice-from-an-array"><span class="toc-number">6.1.</span> <span class="toc-text"> Create a slice from an array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#create-slices-with-the-make-function"><span class="toc-number">6.2.</span> <span class="toc-text"> Create slices with the make() function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#append-elements-to-a-slice"><span class="toc-number">6.3.</span> <span class="toc-text"> Append elements to a slice</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-efficiency"><span class="toc-number">6.4.</span> <span class="toc-text"> Memory efficiency</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-operators"><span class="toc-number">7.</span> <span class="toc-text"> Go Operators</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-conditions"><span class="toc-number">8.</span> <span class="toc-text"> Go Conditions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-statement"><span class="toc-number">8.1.</span> <span class="toc-text"> If statement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch-case"><span class="toc-number">8.2.</span> <span class="toc-text"> Switch case</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-loops"><span class="toc-number">9.</span> <span class="toc-text"> Go loops</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#for-loop"><span class="toc-number">9.1.</span> <span class="toc-text"> For loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#the-range-keyword"><span class="toc-number">9.2.</span> <span class="toc-text"> The range keyword</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-function"><span class="toc-number">10.</span> <span class="toc-text"> Go function</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#named-return-values"><span class="toc-number">10.1.</span> <span class="toc-text"> Named return values</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#recursion"><span class="toc-number">10.2.</span> <span class="toc-text"> Recursion</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#go-struct"><span class="toc-number">11.</span> <span class="toc-text"> Go Struct</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#access-structure-members"><span class="toc-number">11.1.</span> <span class="toc-text"> Access structure members</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Go_Learning" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Golang Basics Notes
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/03/27/Go_Learning/" class="article-date">
+	  <time datetime="2023-03-27T20:52:19.003Z" itemprop="datePublished">2023-03-27</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Technology/">Technology</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Program-skills/" rel="tag">Program skills</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/03/27/Go_Learning/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="1-first-go-program"><a class="markdownIt-Anchor" href="#1-first-go-program"></a> 1 First Go program</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;hello, world!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Using</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run hello.go</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go build hello.go</span><br><span class="line">./hello</span><br></pre></td></tr></table></figure>
+<p>to run this program.</p>
+<h1 id="2-go-variables"><a class="markdownIt-Anchor" href="#2-go-variables"></a> 2 Go Variables</h1>
+<p>There are 2 ways to declaring variables</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variableName <span class="keyword">type</span> = value</span><br><span class="line"></span><br><span class="line">variableName := value</span><br></pre></td></tr></table></figure>
+<p>In Go, all variables are initialized. If not initialized, the variable will be set to the default value of its type.</p>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>:=</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inside and ourside function</td>
+<td>only inside function</td>
+</tr>
+<tr>
+<td>declaration and value assignment CAN be separately</td>
+<td>declaration and value assignment CANNOT be separately</td>
+</tr>
+</tbody>
+</table>
+<h2 id="declare-multiple-variables"><a class="markdownIt-Anchor" href="#declare-multiple-variables"></a> Declare multiple variables</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b <span class="type">int</span> = <span class="number">1</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">var</span> c, d = <span class="string">&quot;test&quot;</span>, <span class="number">3</span></span><br><span class="line">e, f := <span class="string">&quot;test1&quot;</span>, <span class="number">3</span></span><br><span class="line"><span class="comment">// in a block</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    g <span class="type">int</span></span><br><span class="line">    h <span class="type">int</span> = <span class="number">1</span></span><br><span class="line">    i <span class="type">string</span> = <span class="string">&quot;III&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h1 id="go-constants"><a class="markdownIt-Anchor" href="#go-constants"></a> Go Constants</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// syntax</span></span><br><span class="line"><span class="keyword">const</span> CONSTNAME <span class="keyword">type</span> = value</span><br><span class="line"></span><br><span class="line"><span class="comment">// typed and untyped</span></span><br><span class="line"><span class="keyword">const</span> A <span class="type">int</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">const</span> B = <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// multi constants declaration</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    C <span class="type">int</span> = <span class="number">1</span></span><br><span class="line">    D = <span class="number">2.4</span></span><br><span class="line">    E = <span class="string">&quot;test&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="rules"><a class="markdownIt-Anchor" href="#rules"></a> Rules</h2>
+<ul>
+<li>Usually written in uppercase letters</li>
+<li>Can be declared both inside and outside of a function</li>
+</ul>
+<h1 id="go-output"><a class="markdownIt-Anchor" href="#go-output"></a> Go output</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fmt.Print(<span class="string">&quot;x&quot;</span>)</span><br><span class="line">fmt.Println(<span class="string">&quot;Xy&quot;</span>)</span><br><span class="line">fmt.Printf(<span class="string">&quot;%v&quot;</span>, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="formatting-verbs"><a class="markdownIt-Anchor" href="#formatting-verbs"></a> Formatting verbs</h2>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%v</td>
+<td>print value</td>
+</tr>
+<tr>
+<td>%#v</td>
+<td>print value in Go syntax format</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>print the type of value</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>print %</td>
+</tr>
+</tbody>
+</table>
+<p>Also there are integer formatting verbs, string formatting verbs, boolean formatting verbs and float formatting verbs.</p>
+<h1 id="go-arrays"><a class="markdownIt-Anchor" href="#go-arrays"></a> Go Arrays</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// syntax</span></span><br><span class="line"><span class="keyword">var</span> array_name = [length]datatype&#123;values&#125;</span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">3</span>]<span class="type">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">var</span> array_name = [...]datatype&#123;values&#125;</span><br><span class="line"><span class="keyword">var</span> b = [...]<span class="type">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">array_name := [length]datatype&#123;values&#125;</span><br><span class="line">c := [<span class="number">3</span>]<span class="type">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">c[<span class="number">0</span>] = <span class="number">2</span></span><br><span class="line">fmt.Println(c[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="array-initialization"><a class="markdownIt-Anchor" href="#array-initialization"></a> Array initialization</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// not init</span></span><br><span class="line">arr1 := [<span class="number">3</span>]<span class="type">int</span>&#123;&#125;</span><br><span class="line"><span class="comment">//partially init</span></span><br><span class="line">arr2 := [<span class="number">3</span>]<span class="type">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span><br><span class="line"><span class="comment">// fully init</span></span><br><span class="line">arr3 := [<span class="number">2</span>]<span class="type">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="init-only-specific-elements"><a class="markdownIt-Anchor" href="#init-only-specific-elements"></a> Init only specific elements</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// assign 10 to index2 </span></span><br><span class="line">arr1 := [<span class="number">3</span>]<span class="type">int</span>&#123;<span class="number">2</span>:<span class="number">10</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="find-the-length-of-an-array"><a class="markdownIt-Anchor" href="#find-the-length-of-an-array"></a> Find the length of an array</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt.Println(<span class="built_in">len</span>(arr1))</span><br></pre></td></tr></table></figure>
+<h1 id="go-slices"><a class="markdownIt-Anchor" href="#go-slices"></a> Go slices</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Syntax</span></span><br><span class="line">slice_name := []datatype&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>len(arr): return slice length<br />
+cap(arr): return slice capacity</p>
+<h2 id="create-a-slice-from-an-array"><a class="markdownIt-Anchor" href="#create-a-slice-from-an-array"></a> Create a slice from an array</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// end exclusive</span></span><br><span class="line">mySlice := myArray[start:end]</span><br></pre></td></tr></table></figure>
+<h2 id="create-slices-with-the-make-function"><a class="markdownIt-Anchor" href="#create-slices-with-the-make-function"></a> Create slices with the make() function</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">slice_name := <span class="built_in">make</span>([]<span class="keyword">type</span>, length, capacity)</span><br><span class="line"></span><br><span class="line"><span class="comment">// with omitted capacity, capacity is equal to length</span></span><br><span class="line">slice_name := <span class="built_in">make</span>([]<span class="keyword">type</span>, length)</span><br></pre></td></tr></table></figure>
+<h2 id="append-elements-to-a-slice"><a class="markdownIt-Anchor" href="#append-elements-to-a-slice"></a> Append elements to a slice</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//syntax</span></span><br><span class="line">slice_name = <span class="built_in">append</span>(slice_name, element1, element2, ...)</span><br><span class="line"></span><br><span class="line">slice1 = <span class="built_in">append</span>(slice2, slice3...)</span><br></pre></td></tr></table></figure>
+<p>The … after slice3 is necessary when appending the elemetns of one slice to another.</p>
+<h2 id="memory-efficiency"><a class="markdownIt-Anchor" href="#memory-efficiency"></a> Memory efficiency</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//syntax</span></span><br><span class="line"><span class="built_in">copy</span>(dest, src)</span><br></pre></td></tr></table></figure>
+<h1 id="go-operators"><a class="markdownIt-Anchor" href="#go-operators"></a> Go Operators</h1>
+<ul>
+<li>Arithmetic operators</li>
+<li>Assignment operators</li>
+<li>Comparison operators</li>
+<li>Logical operators</li>
+<li>Bitwise operators</li>
+</ul>
+<h1 id="go-conditions"><a class="markdownIt-Anchor" href="#go-conditions"></a> Go Conditions</h1>
+<h2 id="if-statement"><a class="markdownIt-Anchor" href="#if-statement"></a> If statement</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//syntax</span></span><br><span class="line"><span class="keyword">if</span> condition &#123;</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> <span class="built_in">new</span> condition &#123;</span><br><span class="line">    <span class="comment">// new code</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// new code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="switch-case"><a class="markdownIt-Anchor" href="#switch-case"></a> Switch case</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//syntax</span></span><br><span class="line"><span class="keyword">switch</span> expression &#123;</span><br><span class="line">    <span class="keyword">case</span> x:</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">    <span class="keyword">case</span> y:</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Don’t add break</p>
+<h1 id="go-loops"><a class="markdownIt-Anchor" href="#go-loops"></a> Go loops</h1>
+<h2 id="for-loop"><a class="markdownIt-Anchor" href="#for-loop"></a> For loop</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// syntax</span></span><br><span class="line"><span class="keyword">for</span> statement1; statement2; statement3 &#123;</span><br><span class="line">    <span class="comment">//code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="the-range-keyword"><a class="markdownIt-Anchor" href="#the-range-keyword"></a> The range keyword</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// syntax</span></span><br><span class="line"><span class="keyword">for</span> index, value := <span class="keyword">range</span> array or slice or <span class="keyword">map</span> &#123;</span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="go-function"><a class="markdownIt-Anchor" href="#go-function"></a> Go function</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// syntax</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FunctionName</span><span class="params">(param <span class="keyword">type</span>, param2 <span class="keyword">type</span>)</span></span> <span class="keyword">type</span> &#123;</span><br><span class="line"> <span class="comment">//code   </span></span><br><span class="line"> <span class="keyword">return</span> output</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="named-return-values"><a class="markdownIt-Anchor" href="#named-return-values"></a> Named return values</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">functionName</span> <span class="params">(x <span class="type">int</span>, y <span class="type">int</span>)</span></span> (result <span class="type">int</span>, result1 <span class="type">int</span>) &#123;</span><br><span class="line">    result = x + y</span><br><span class="line">    result1 = x - y</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="recursion"><a class="markdownIt-Anchor" href="#recursion"></a> Recursion</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">test</span><span class="params">(x <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x == <span class="number">11</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fmt.Println(x)</span><br><span class="line">    <span class="keyword">return</span> test(x + <span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="go-struct"><a class="markdownIt-Anchor" href="#go-struct"></a> Go Struct</h1>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> structName <span class="keyword">struct</span> &#123;</span><br><span class="line">    member1 datatype</span><br><span class="line">    member2 datatype</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="access-structure-members"><a class="markdownIt-Anchor" href="#access-structure-members"></a> Access structure members</h2>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> per1 person</span><br><span class="line">per1.name = <span class="string">&quot;TestName&quot;</span></span><br><span class="line">per1.age = <span class="number">24</span></span><br></pre></td></tr></table></figure>
+<p>structure can be function arguments</p>
+<p>Go Maps</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//syntax</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">map</span>[keyType]ValueType&#123;key1:value1, key2:value2,...&#125;</span><br><span class="line">b := <span class="keyword">map</span>[keyType]ValueType&#123;key1:value1, key2:value2,...&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <!--
+ * @Author: Minghao Chen
+ * @Date: 2023-02-22 17:48:53
+-->
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-license">
+      <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"></a><br />This work is
+      licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+        Attribution 4.0 International License</a>.
+    </li>
+  </ul>
+</blockquote>
+
+  
+    <div class="panel panel-default panel-badger">
+      <div class="panel-body">
+        <figure class="media">
+          <div class="media-left">
+            <a href="https://github.com/Rainbowow" target="_blank" class="img-burn thumb-sm visible-lg">
+              <img src="/images/avatar.jpg"
+                class="img-rounded w-full" alt="">
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading"><a href="https://github.com/Rainbowow" target="_blank"><span class="text-dark">
+                  Rainbow
+                </span><small class="ml-1x">
+                  Developer
+                </small></a></h3>
+            <div>
+              
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2023/02/26/Microservice/" title="Microservice learning"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="Catalogue" role="button">    <span>[&nbsp;</span><span>Catalogue</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Rainbowow" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2023 Rainbow
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
